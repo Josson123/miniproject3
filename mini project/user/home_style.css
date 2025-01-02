@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+::selection {
+  color: #000;
+  background: #fff;
+}
+nav {
+  position: fixed;
+  top: 0; 
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* Welcome Message Styling */
+#welcome-message {
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+/* Hide the message after 2 seconds */
+.hide-message {
+  opacity: 0;
+}
+
+.menu .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul {
+  display: inline-flex;
+}
+.menu ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child {
+  margin-left: 0px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover {
+  background: #fff;
+  color: black;
+}
+.img {
+  background: url("../images/home/img.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0); /* Adjust opacity as desired */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Keeps overlay behind the content */
+}
+
+.center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensures it appears above overlay */
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+}
+
+
+
+.center .title {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+.center .btns {
+  margin-top: 20px;
+}
+.center .btns button {
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .btns button:first-child {
+  color: #fff;
+  background: none;
+}
+.btns button:first-child:hover {
+  background: white;
+  color: black;
+}
+.center .btns button:last-child {
+  background: white;
+  color: black;
+}
+
+
+Form Container 
+.rental-form {
+
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+
+}
+
+/* Form Title */
+.rental-form h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+/* Horizontal Row Layout */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Form Group Styling */
+.form-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Labels */
+.rental-form .form-label {
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Inputs and Select Fields */
+.rental-form .form-control
+ {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.8rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+
+
+
+
+ 
+
+/* Input Focus Effects */
+.rental-form .form-control:focus,
+.rental-form .form-select:focus {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  outline: none;
+  border-color: #ffc107;
+}
+
+/* Submit Button */
+.rental-form .btn-primary {
+  margin-top: 1.5rem;
+  background-color: #ffc107;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.rental-form .btn-primary:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+
+/*-----------------------------------------*/
+/* Background Image Section */
+/* Ensure bg-image-section spans full width */
+/* Add this to your existing <style> section */
+.bg-image-section {
+  background: url('../images/home/img2.jpg') no-repeat center center/cover; /* Add 'background:' */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  position: relative;
+}
+
+/* Optional: Add a semi-transparent overlay for better text readability */
+.bg-image-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1;
+}
+
+
+
+/* Additional Background Image Section */
+.additional-bg-section {
+  background: url('../images/home/img3.jpg') no-repeat center center/cover;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* Overlay to Darken Background for Readability */
+.bg-image-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1; /* Keep below the form */
+}
+
+/* Rental Form Section with Transparent Background */
+.rental-form {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent form background */
+  backdrop-filter: blur(5px);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2; /* Keep it on top of the overlay */
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Form Input Styling */
+.rental-form .form-control,
+.rental-form .form-select {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.8rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+/* Input Focus Effects */
+.rental-form .form-control:focus,
+.rental-form .form-select:focus {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  outline: none;
+  border-color: #ffc107;
+}
+
+/* Button Styling */
+.rental-form .btn-primary {
+  margin-top: 1.5rem;
+  background-color: #ffc107;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.rental-form .btn-primary:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+
+/* Adjust card size and layout */
+.bikes-list{
+  border-radius: 0;
+}
+#bikes-list {
+  background-color: #333; /* Dark background for cards */
+  padding: 20px 0; /* Spacing for visual separation */
+  
+}
+
+#bikes-list .col-md-6.col-lg-4 {
+  flex: 0 0 23%;  /* Four cards per row */
+  max-width: 23%;
+  margin: 0.5%; /* Small margin between cards */
+  background-color: #333;
+}
+/* Card styling */
+.card {
+  height: 300px; /* Control card height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Background for multiple card rows */
+#bikes-list {
+  background-color: #000; /* Set black background */
+  padding: 20px;  /* Space around the cards */
+  border-radius: 0px;
+  margin-bottom: 0; /* Rounds the edges of the section */
+}
+footer {
+  background-color: #f0f0f0; /* Or any desired background color */
+  padding: 10px 0; /* Adjust padding as needed */
+}
+
+
+/*Styling of Contact us*/
+/* Gradient background for the contact-us section */
+.contact-us {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient colors */
+  color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Title styling */
+.contact-us h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Paragraph and contact info styling */
+.full-width-section {
+  width: 100%;
+  background: linear-gradient(to right, black, teal, yellow);
+}
+.contact-us {
+
+  max-width: 100%; /* Adjust if you want to limit max width */
+  background: linear-gradient(to right, black, teal, yellow);
+  margin: auto;
+  padding: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+/* Social media styling */
+.social-media {
+  margin-top: 15px;
+}
+
+.social-media p {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-media img:hover {
+  transform: scale(1.2);
+}
+
+.small-footer {
+  padding: 10px 0;  /* Reduced padding for smaller footer */
+  font-size: 0.875rem; /* Smaller font size */
+  
+  text-align: center;
+  margin: 0; /* Remove default margin if any */
+}
+
+footer {
+  background: linear-gradient(to right, black, teal, yellow);
+ 
+  margin: 0; /* Ensure no extra space around footer text */
+}
+footer p{
+     color:#000;
+}  
